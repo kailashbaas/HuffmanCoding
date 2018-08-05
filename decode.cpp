@@ -4,13 +4,10 @@
 #include <map>
 #include <deque>
 #include <string>
-
-// Gets bit i, where 0 <= i < 8
-std::string getBitI(char byte, int i);
+#include "decode.h"
 
 int main(int argc, char* argv[])
 {
-    // stuff
     std::ifstream codesStream(argv[1]);
     std::map<std::string, int> codes;
     int character, c, num_zeroes;
@@ -25,8 +22,6 @@ int main(int argc, char* argv[])
 
     std::ifstream inputStream("/dev/stdin", std::ios::binary);
 
-    //inputStream >> std::noskipws >> input;
-    //num_zeroes = static_cast<int>(input);
     inputStream >> num_zeroes;
     while (inputStream >> std::noskipws >> input)
     {
@@ -51,7 +46,6 @@ int main(int argc, char* argv[])
         }
         else
         {
-            // TODO: definitely needs to be changed
             for (int i = 0; i < 8; i++)
             {
                 bit_string.append(getBitI(input, i));
