@@ -1,19 +1,26 @@
-frequencies.cpp calculates the frequency of every character in the file
-huffman.cpp calculates the encoding for each character and outputs the expected
-size of the compressed file
-encode.cpp compresses the file using a file of character encodings
-decode.cpp decompresses the file using a file of character encodings
+####frequencies.cpp
+Calculates the frequency of every character in the file
+####huffman.cpp
+Calculates the encoding for each character and outputs the expected size of the compressed file
+####encode.cpp
+Compresses the file using a file of character encodings
+####decode.cpp
+Decompresses the file using a file of character encodings
 
 Usage:
 
- $~] cat [FILE] | ./frequencies | ./huffman
+Generate the file containing the character encodings:
+
+    cat [FILE] | ./frequencies | ./huffman
     832
     (And also generates the file 'codewords.txt')
 
- $~] cat [FILE] | ./encode codewords.txt > [OUTPUT\_FILE]
 
-    Encodes the file and writes the compressed file to OUTPUT_FILE
+Encode FILE and write the compressed file to OUTPUT\_FILE:
 
- $~] cat encoded | ./decode codewords.txt > [OUTPUT\_FILE]
+    cat [FILE] | ./encode codewords.txt > [OUTPUT_FILE]
 
-    Decodes the file and writes the decoded file to OUTPUT_FILE
+
+Decode FILE and write the decoded file to OUTPUT\_FILE:
+
+    cat [FILE] | ./decode codewords.txt > [OUTPUT_FILE]
