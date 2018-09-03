@@ -1,13 +1,13 @@
-**frequencies.cpp**
+**frequencies.cpp** - 
 Calculates the frequency of every character in the file
 
-**huffman.cpp**
+**huffman.cpp** - 
 Calculates the encoding for each character and outputs the expected size of the compressed file
 
-**encode.cpp**
+**encode.cpp** - 
 Compresses the file using a file of character encodings
 
-**decode.cpp**
+**decode.cpp** - 
 Decompresses the file using a file of character encodings
 
 Usage:
